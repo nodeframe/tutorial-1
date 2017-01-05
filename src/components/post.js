@@ -6,6 +6,14 @@ function handleChange(s){
 	};
 }
 
+const FancyButton = (props)=>{
+	return (
+		<div>
+			FancyButton {props.name}
+		</div>
+	);
+}
+
 export class Post extends React.Component{
 
 	constructor(){
@@ -28,6 +36,7 @@ export class Post extends React.Component{
 			<div>
 				<input type="text" value={this.state.value} onChange={this.handleChange.bind(this)} />
 				<button onClick={this.onSubmitClick.bind(this)}>ADD</button>
+				<FancyButton name="Mark"/>
 			</div>
 		);
 	}
